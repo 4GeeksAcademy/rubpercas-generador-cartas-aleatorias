@@ -1,1 +1,209 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+body {
+  background-image: url("https://img.freepik.com/vector-premium/fondo-mesa-poker-color-verde_47243-1068.jpg?w=740");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs {
+  display: flex;
+  align-self: flex-end;
+  text-align: center;
+  color: white;
+  z-index: 1;
+  padding: 5px 10px;
+  font-weight: bold;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border: none;
+  background-color: #000000;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+input {
+  margin: 5px;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+}
+
+label {
+  margin: 5px;
+}
+
+.card {
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  transition: transform 0.5s ease-in-out;
+}
+.card:hover {
+  transform: rotateY(180deg);
+}
+.card .top {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 80px;
+}
+
+.card .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 120px;
+}
+
+.card .bottom {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 80px;
+  transform: rotate(180deg);
+}
+.heart .top,
+.heart .bottom {
+  color: red;
+}
+
+.diamond .top,
+.diamond .bottom {
+  color: red;
+}
+
+.club .top,
+.club .bottom {
+  color: black;
+}
+
+.spade .top,
+.spade .bottom {
+  color: black;
+}
+
+/* .card-back {
+  z-index: 2;
+  height: 400px;
+  width: 300px;
+  background-image: url("https://cdn.pixabay.com/photo/2013/07/13/14/06/gingerbread-162141_1280.png");
+  object-fit: cover;
+  background-size: 280px 380px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(197, 49, 49);
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px;
+  position: relative;
+} */
+
+.next-card {
+  z-index: 1;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #000000;
+}
+.delay-card {
+  z-index: 1;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #000000;
+}
+.next-card:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.delay-card:hover {
+  border-radius: 5px;
+  padding-right: 24px;
+  padding-left: 8px;
+}
+.next-card:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.delay-card:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.next-card:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+.delay-card:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 40px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
+}
+
+.change-size {
+  width: 200px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 5px;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #000000;
+  margin: 2px 2px 2px 10px;
+}
